@@ -74,7 +74,38 @@
             <h2>CLOTHING</h2>
             <div class="subcategories">
                 <div class="subcategory-column">
-                    <div class="subcategory-item">Upper</div>
+
+
+                    <div class="subcategory-item" onclick="toggleDropbox(this)">
+                        Upper
+                        <div class="dropbox">
+                            <div class="upload-section">
+                                <div class="upload-photo">
+                                    <span>Upload Photo</span>
+                                    <input type="file" class="file-input" accept="image/*" onchange="previewImage(this)">
+                                    <label class="upload-label">Choose File</label>
+                                    <img class="preview-image" alt="Preview">
+                                </div>
+                                <div class="quantity-selector">
+                                    <span>Quantity</span>
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="location-detector" onclick="detectLocation(this)">
+                                Detect My Location
+                                <div class="location-info"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
                     <div class="subcategory-item">Lowers</div>
                     <div class="subcategory-item">Innerwear</div>
                     <div class="subcategory-item">Lowers</div>
@@ -199,5 +230,6 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
