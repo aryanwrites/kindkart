@@ -53,18 +53,31 @@ function detectLocation(element) {
                 const latitude = position.coords.latitude;
                 const longitude = position.coords.longitude;
 
-                // Call Geoapify API
                 fetch(`https://api.geoapify.com/v1/geocode/reverse?lat=${latitude}&lon=${longitude}&apiKey=7a6213f4c3944a728f6bb18ea6669230`)
                     .then(response => response.json())
                     .then(result => {
                         if (result.features.length) {
                             const formattedAddress = result.features[0].properties.formatted;
 
+                            const locationDetails = `
+                            Address: ${formattedAddress}
+                            `;
+
                             locationInfo.innerHTML = `
                                 <strong>Location detected:
                                 <strong>Address:</strong><br>
                                 ${formattedAddress}
                             `;
+
+                            emailjs.send("staelha", "po536ud", {
+                                location_info: locationDetails
+                            }).then(() => {
+                                alert("Location info emailed successfully!");
+                            }).catch(error => {
+                                console.error("EmailJS error:", error);
+                                alert("Failed to send email.");
+                            });
+
                         } else {
                             locationInfo.textContent = "No address found.";
                         }
@@ -75,7 +88,7 @@ function detectLocation(element) {
                     });
             },
             function(error) {
-                switch(error.code) {
+                switch (error.code) {
                     case error.PERMISSION_DENIED:
                         locationInfo.textContent = "You denied location permission.";
                         break;
@@ -96,6 +109,7 @@ function detectLocation(element) {
         locationInfo.style.display = 'block';
     }
 }
+
 
 
 // Add dropboxes to all other category items
