@@ -54,16 +54,14 @@ function detectLocation(element) {
                 const longitude = position.coords.longitude;
 
                 // Call Geoapify API
-                fetch(`https://api.geoapify.com/v1/geocode/reverse?lat=${latitude}&lon=${longitude}&apiKey=YOUR_API_KEY`)
+                fetch(`https://api.geoapify.com/v1/geocode/reverse?lat=${latitude}&lon=${longitude}&apiKey=7a6213f4c3944a728f6bb18ea6669230`)
                     .then(response => response.json())
                     .then(result => {
                         if (result.features.length) {
                             const formattedAddress = result.features[0].properties.formatted;
 
                             locationInfo.innerHTML = `
-                                <strong>Location detected:</strong><br>
-                                Latitude: ${latitude.toFixed(6)}<br>
-                                Longitude: ${longitude.toFixed(6)}<br>
+                                <strong>Location detected:
                                 <strong>Address:</strong><br>
                                 ${formattedAddress}
                             `;
