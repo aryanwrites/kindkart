@@ -43,31 +43,37 @@ function previewImage(input) {
 // Detect user location
 function detectLocation(element) {
     const locationInfo = element.querySelector('.location-info');
-    
+
     if (navigator.geolocation) {
-        // locationInfo.textContent = "Detecting your location...";
+        locationInfo.textContent = "Detecting your location...";
         locationInfo.style.display = 'block';
-        
+
         navigator.geolocation.getCurrentPosition(
             function(position) {
                 const latitude = position.coords.latitude;
                 const longitude = position.coords.longitude;
-                
 
+                // Call Geoapify API
+                fetch(`https://api.geoapify.com/v1/geocode/reverse?lat=${latitude}&lon=${longitude}&apiKey=7a6213f4c3944a728f6bb18ea6669230`)
+                    .then(response => response.json())
+                    .then(result => {
+                        if (result.features.length) {
+                            const formattedAddress = result.features[0].properties.formatted;
 
-                locationInfo.innerHTML = `
-                    <strong>Location detected:</strong><br>
-                    Latitude: ${latitude.toFixed(6)}<br>
-                    Longitude: ${longitude.toFixed(6)}
-                `;
-                
-                console.log("Latitude:", latitude);
-                console.log("Longitude:", longitude);
-                
-                // You can use these coordinates for further processing
-                // For example, reverse geocoding to get address
+                            locationInfo.innerHTML = `
+                                <strong>Location detected:
+                                <strong>Address:</strong><br>
+                                ${formattedAddress}
+                            `;
+                        } else {
+                            locationInfo.textContent = "No address found.";
+                        }
+                    })
+                    .catch(error => {
+                        console.error(error);
+                        locationInfo.textContent = "Error fetching address.";
+                    });
             },
-            // Error callback
             function(error) {
                 switch(error.code) {
                     case error.PERMISSION_DENIED:
@@ -79,18 +85,18 @@ function detectLocation(element) {
                     case error.TIMEOUT:
                         locationInfo.textContent = "Location request timed out.";
                         break;
-                    case error.UNKNOWN_ERROR:
+                    default:
                         locationInfo.textContent = "An unknown error occurred.";
                         break;
                 }
             }
         );
-    } 
-    // else {
-    //     locationInfo.textContent = "Geolocation is not supported by this browser.";
-    //     locationInfo.style.display = 'block';
-    // }
+    } else {
+        locationInfo.textContent = "Geolocation is not supported by this browser.";
+        locationInfo.style.display = 'block';
+    }
 }
+
 
 // Add dropboxes to all other category items
 document.addEventListener('DOMContentLoaded', function() {
