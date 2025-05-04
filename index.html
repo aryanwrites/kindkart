@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KindKart - Donate Reusable Items</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("kjY4_QXq2wEYW7Ogq");
+        })();
+    </script>
+        <script src="script.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">KIND<span>KART</span></div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#" class="donate-btn">Donate</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="hero">
+            <h1>How do you want to make a difference today?</h1>
+            <p>Donate your reusable items and help someone in need</p>
+            <button class="donate-button">Start Donating</button>
+        </section>
+
+        <section class="categories">
+            <div class="category-card">
+                <div class="category-icon">
+                    <i>👕</i>
+                </div>
+                <h3>Clothing</h3>
+                <p>Donate clothes in good condition</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">
+                    <i>📚</i>
+                </div>
+                <h3>Education</h3>
+                <p>Books, stationery and learning materials</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">
+                    <i>💊</i>
+                </div>
+                <h3>Health Care</h3>
+                <p>Unused medicines and health essentials</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">
+                    <i>🍎</i>
+                </div>
+                <h3>Pure Food</h3>
+                <p>Non-perishable food items</p>
+            </div>
+
+            <div class="category-card">
+                <div class="category-icon">
+                    <i>🧸</i>
+                </div>
+                <h3>Miscellaneous</h3>
+                <p>Toys, furniture, appliances and more</p>
+            </div>
+        </section>
+
+        <section class="subcategory-section" id="clothing">
+            <h2>CLOTHING</h2>
+            <div class="subcategories">
+                <div class="subcategory-column">
+
+
+                    <div class="subcategory-item" onclick="toggleDropbox(this)">
+                        Upper
+                        <div class="dropbox">
+                            <div class="upload-section">
+                                <div class="upload-photo">
+                                    <span>Upload Photo</span>
+                                    <input type="file" class="file-input" accept="image/*" onchange="previewImage(this)">
+                                    <label class="upload-label">Choose File</label>
+                                    <img class="preview-image" alt="Preview">
+                                </div>
+                                <div class="quantity-selector">
+                                    <span>Quantity</span>
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="location-detector" onclick="detectLocation(this)">
+                                Detect My Location
+                                <div class="location-info"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="subcategory-item" onclick="toggleDropbox(this)">
+                        Lower
+                        <div class="dropbox">
+                            <div class="upload-section">
+                                <div class="upload-photo">
+                                    <span>Upload Photo</span>
+                                    <input type="file" class="file-input" accept="image/*" onchange="previewImage(this)">
+                                    <label class="upload-label">Choose File</label>
+                                    <img class="preview-image" alt="Preview">
+                                </div>
+                                <div class="quantity-selector">
+                                    <span>Quantity</span>
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="location-detector" onclick="detectLocation(this)">
+                                Detect My Location
+                                <div class="location-info"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                     <div class="subcategory-item" onclick="toggleDropbox(this)">
+                        Innerwear
+                        <div class="dropbox">
+                            <div class="upload-section">
+                                <div class="upload-photo">
+                                    <span>Upload Photo</span>
+                                    <input type="file" class="file-input" accept="image/*" onchange="previewImage(this)">
+                                    <label class="upload-label">Choose File</label>
+                                    <img class="preview-image" alt="Preview">
+                                </div>
+                                <div class="quantity-selector">
+                                    <span>Quantity</span>
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="location-detector" onclick="detectLocation(this)">
+                                Detect My Location
+                                <div class="location-info"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="subcategory-item" onclick="toggleDropbox(this)">
+                        Suits
+                        <div class="dropbox">
+                            <div class="upload-section">
+                                <div class="upload-photo">
+                                    <span>Upload Photo</span>
+                                    <input type="file" class="file-input" accept="image/*" onchange="previewImage(this)">
+                                    <label class="upload-label">Choose File</label>
+                                    <img class="preview-image" alt="Preview">
+                                </div>
+                                <div class="quantity-selector">
+                                    <span>Quantity</span>
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="location-detector" onclick="detectLocation(this)">
+                                Detect My Location
+                                <div class="location-info"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="subcategory-column">
+                    <div class="subcategory-item" onclick="toggleDropbox(this)">
+                        Blankets
+                        <div class="dropbox">
+                            <div class="upload-section">
+                                <div class="upload-photo">
+                                    <span>Upload Photo</span>
+                                    <input type="file" class="file-input" accept="image/*" onchange="previewImage(this)">
+                                    <label class="upload-label">Choose File</label>
+                                    <img class="preview-image" alt="Preview">
+                                </div>
+                                <div class="quantity-selector">
+                                    <span>Quantity</span>
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="location-detector" onclick="detectLocation(this)">
+                                Detect My Location
+                                <div class="location-info"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="subcategory-item" onclick="toggleDropbox(this)">
+                        Accessories
+                        <div class="dropbox">
+                            <div class="upload-section">
+                                <div class="upload-photo">
+                                    <span>Upload Photo</span>
+                                    <input type="file" class="file-input" accept="image/*" onchange="previewImage(this)">
+                                    <label class="upload-label">Choose File</label>
+                                    <img class="preview-image" alt="Preview">
+                                </div>
+                                <div class="quantity-selector">
+                                    <span>Quantity</span>
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="location-detector" onclick="detectLocation(this)">
+                                Detect My Location
+                                <div class="location-info"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="subcategory-item" onclick="toggleDropbox(this)">
+                        Footwear
+                        <div class="dropbox">
+                            <div class="upload-section">
+                                <div class="upload-photo">
+                                    <span>Upload Photo</span>
+                                    <input type="file" class="file-input" accept="image/*" onchange="previewImage(this)">
+                                    <label class="upload-label">Choose File</label>
+                                    <img class="preview-image" alt="Preview">
+                                </div>
+                                <div class="quantity-selector">
+                                    <span>Quantity</span>
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="location-detector" onclick="detectLocation(this)">
+                                Detect My Location
+                                <div class="location-info"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="subcategory-item" onclick="toggleDropbox(this)">
+                        Others
+                        <div class="dropbox">
+                            <div class="upload-section">
+                                <div class="upload-photo">
+                                    <span>Upload Photo</span>
+                                    <input type="file" class="file-input" accept="image/*" onchange="previewImage(this)">
+                                    <label class="upload-label">Choose File</label>
+                                    <img class="preview-image" alt="Preview">
+                                </div>
+                                <div class="quantity-selector">
+                                    <span>Quantity</span>
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="location-detector" onclick="detectLocation(this)">
+                                Detect My Location
+                                <div class="location-info"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="subcategory-section" id="education">
+            <h2>EDUCATION</h2>
+            <div class="subcategories">
+                <div class="subcategory-column">
+                    <div class="subcategory-item">Blank notebooks</div>
+                    <div class="subcategory-item">Writing essentials</div>
+                    <div class="subcategory-item">Academic books</div>
+                    <div class="subcategory-item">Story books/ Novels</div>
+                </div>
+                <div class="subcategory-column">
+                    <div class="subcategory-item">Craft supplies</div>
+                    <div class="subcategory-item">Adhesives</div>
+                    <div class="subcategory-item">Others</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="subcategory-section" id="healthcare">
+            <h2>HEALTH CARE</h2>
+            <div class="subcategories">
+                <div class="subcategory-column">
+                    <div class="subcategory-item">Heart Care</div>
+                    <div class="subcategory-item">Pain Relief</div>
+                    <div class="subcategory-item">Diabetes Care</div>
+                    <div class="subcategory-item">Vitamin Supplements</div>
+                </div>
+                <div class="subcategory-column">
+                    <div class="subcategory-item">Cough, Cold & Fever</div>
+                    <div class="subcategory-item">First Aid</div>
+                    <div class="subcategory-item">Respiratory Care</div>
+                    <div class="subcategory-item">Others</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="subcategory-section" id="purefood">
+            <h2>PURE FOOD</h2>
+            <div class="subcategories">
+                <div class="subcategory-column">
+                    <div class="subcategory-item">Cooked Food</div>
+                    <div class="subcategory-item">Cold Drinks/ Juices</div>
+                    <div class="subcategory-item">Fruits & Vegetables</div>
+                    <div class="subcategory-item">Frozen Food</div>
+                </div>
+                <div class="subcategory-column">
+                    <div class="subcategory-item">Atta, Rice, Oils</div>
+                    <div class="subcategory-item">Meat, Fishes & Eggs</div>
+                    <div class="subcategory-item">Biscuits, Namkeen</div>
+                    <div class="subcategory-item">Others</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="subcategory-section" id="miscellaneous">
+            <h2>MISCELLANEOUS</h2>
+            <div class="subcategories">
+                <div class="subcategory-column">
+                    <div class="subcategory-item">Toys</div>
+                    <div class="subcategory-item">Utensils</div>
+                    <div class="subcategory-item">Appliances</div>
+                    <div class="subcategory-item">Furniture</div>
+                </div>
+                <div class="subcategory-column">
+                    <div class="subcategory-item">Flower seeds</div>
+                    <div class="subcategory-item">Misc</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>KINDKART</h3>
+                    <p>Making the world a better place through reusing and recycling.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Donate</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#clothing">Clothing</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#healthcare">Health Care</a></li>
+                        <li><a href="#purefood">Pure Food</a></li>
+                        <li><a href="#miscellaneous">Miscellaneous</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p>Email: pvtlimitedkindkart@gmail.com</p>
+                    <p>Phone: +91 1234567890</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 KindKart. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>
