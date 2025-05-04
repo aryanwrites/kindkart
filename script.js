@@ -110,7 +110,7 @@ function detectLocation(element) {
                 })
                 .catch((error) => {
                   console.error("EmailJS error:", error);
-                  alert("Failed to send email.");
+                  error("Failed to send email please rty again.");
                 });
             } else {
               locationInfo.textContent = "No address found.";
