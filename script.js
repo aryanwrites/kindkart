@@ -70,7 +70,8 @@ function previewImage(input) {
   }
 }
 
-// Detect user location
+
+// Detect user location <----------->
 function detectLocation(element) {
   const locationInfo = element.querySelector(".location-info");
 
@@ -95,16 +96,15 @@ function detectLocation(element) {
                             Address: ${formattedAddress}
                             `;
 
-              locationInfo.innerHTML = `
-                                <strong>Location detected:
-                                <strong>Address:</strong><br>
-                                ${formattedAddress}
-                            `;
+                locationInfo.innerHTML = `
 
-              emailjs
-                .send("staelha", "po536ud", {
-                  location_info: locationDetails,
-                })
+                                  ${formattedAddress}
+                              `;
+                console.log("above js ")
+              let parms = {
+                location_info : locationDetails,
+              }
+              emailjs.send("service_h6scupt","template_pinpwi9", parms)
                 .then(() => {
                   alert("Location info emailed successfully!");
                 })
