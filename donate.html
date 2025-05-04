@@ -83,7 +83,7 @@
                 <div class="subcategory-column">
 
 
-                    <div class="subcategory-item" onclick="toggleDropbox(this)">
+                    <div class="subcategory-item" onclick="toggleDropbox(this,event)">
                         Upper
                         <div class="dropbox">
                             <div class="upload-section">
@@ -111,18 +111,210 @@
                             </div>
                         </div>
                     </div>
-
-
-                    <div class="subcategory-item">Lowers</div>
-                    <div class="subcategory-item">Innerwear</div>
-                    <div class="subcategory-item">Lowers</div>
+                    <div class="subcategory-item" onclick="toggleDropbox(this,event)">
+                        Lowers
+                        <div class="dropbox">
+                            <div class="upload-section">
+                                <div class="upload-photo">
+                                    <span>Upload Photo</span>
+                                    <input type="file" class="file-input" accept="image/*" onchange="previewImage(this)">
+                                    <label class="upload-label">Choose File</label>
+                                    <img class="preview-image" alt="Preview">
+                                </div>
+                                <div class="quantity-selector">
+                                    <span>Quantity</span>
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="location-detector" onclick="detectLocation(this)">
+                                Detect My Location
+                                <div class="location-info"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subcategory-item" onclick="toggleDropbox(this,event)">
+                        Towels
+                        <div class="dropbox">
+                            <div class="upload-section">
+                                <div class="upload-photo">
+                                    <span>Upload Photo</span>
+                                    <input type="file" class="file-input" accept="image/*" onchange="previewImage(this)">
+                                    <label class="upload-label">Choose File</label>
+                                    <img class="preview-image" alt="Preview">
+                                </div>
+                                <div class="quantity-selector">
+                                    <span>Quantity</span>
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="location-detector" onclick="detectLocation(this)">
+                                Detect My Location
+                                <div class="location-info"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subcategory-item" onclick="toggleDropbox(this,event)">
+                        Innerwear
+                        <div class="dropbox">
+                            <div class="upload-section">
+                                <div class="upload-photo">
+                                    <span>Upload Photo</span>
+                                    <input type="file" class="file-input" accept="image/*" onchange="previewImage(this)">
+                                    <label class="upload-label">Choose File</label>
+                                    <img class="preview-image" alt="Preview">
+                                </div>
+                                <div class="quantity-selector">
+                                    <span>Quantity</span>
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="location-detector" onclick="detectLocation(this)">
+                                Detect My Location
+                                <div class="location-info"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
                 <div class="subcategory-column">
-                    <div class="subcategory-item">Blankets</div>
-                    <div class="subcategory-item">Accessories</div>
-                    <div class="subcategory-item">Footwear</div>
-                    <div class="subcategory-item">Others</div>
+
+
+                    <div class="subcategory-item" onclick="toggleDropbox(this,event)">
+                        Blankets
+                        <div class="dropbox">
+                            <div class="upload-section">
+                                <div class="upload-photo">
+                                    <span>Upload Photo</span>
+                                    <input type="file" class="file-input" accept="image/*" onchange="previewImage(this)">
+                                    <label class="upload-label">Choose File</label>
+                                    <img class="preview-image" alt="Preview">
+                                </div>
+                                <div class="quantity-selector">
+                                    <span>Quantity</span>
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="location-detector" onclick="detectLocation(this)">
+                                Detect My Location
+                                <div class="location-info"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subcategory-item" onclick="toggleDropbox(this,event)">
+                        Accessories
+                        <div class="dropbox">
+                            <div class="upload-section">
+                                <div class="upload-photo">
+                                    <span>Upload Photo</span>
+                                    <input type="file" class="file-input" accept="image/*" onchange="previewImage(this)">
+                                    <label class="upload-label">Choose File</label>
+                                    <img class="preview-image" alt="Preview">
+                                </div>
+                                <div class="quantity-selector">
+                                    <span>Quantity</span>
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="location-detector" onclick="detectLocation(this)">
+                                Detect My Location
+                                <div class="location-info"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subcategory-item" onclick="toggleDropbox(this,event)">
+                        Footwear
+                        <div class="dropbox">
+                            <div class="upload-section">
+                                <div class="upload-photo">
+                                    <span>Upload Photo</span>
+                                    <input type="file" class="file-input" accept="image/*" onchange="previewImage(this)">
+                                    <label class="upload-label">Choose File</label>
+                                    <img class="preview-image" alt="Preview">
+                                </div>
+                                <div class="quantity-selector">
+                                    <span>Quantity</span>
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="location-detector" onclick="detectLocation(this)">
+                                Detect My Location
+                                <div class="location-info"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subcategory-item" onclick="toggleDropbox(this,event)">
+                        Others
+                        <div class="dropbox">
+                            <div class="upload-section">
+                                <div class="upload-photo">
+                                    <span>Upload Photo</span>
+                                    <input type="file" class="file-input" accept="image/*" onchange="previewImage(this)">
+                                    <label class="upload-label">Choose File</label>
+                                    <img class="preview-image" alt="Preview">
+                                </div>
+                                <div class="quantity-selector">
+                                    <span>Quantity</span>
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="location-detector" onclick="detectLocation(this)">
+                                Detect My Location
+                                <div class="location-info"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
+
             </div>
         </section>
 
@@ -130,15 +322,209 @@
             <h2>EDUCATION</h2>
             <div class="subcategories">
                 <div class="subcategory-column">
-                    <div class="subcategory-item">Blank notebooks</div>
-                    <div class="subcategory-item">Writing essentials</div>
-                    <div class="subcategory-item">Academic books</div>
-                    <div class="subcategory-item">Story books/ Novels</div>
+
+                    <div class="subcategory-item" onclick="toggleDropbox(this,event)">
+                        Blank notebooks
+                        <div class="dropbox">
+                            <div class="upload-section">
+                                <div class="upload-photo">
+                                    <span>Upload Photo</span>
+                                    <input type="file" class="file-input" accept="image/*" onchange="previewImage(this)">
+                                    <label class="upload-label">Choose File</label>
+                                    <img class="preview-image" alt="Preview">
+                                </div>
+                                <div class="quantity-selector">
+                                    <span>Quantity</span>
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="location-detector" onclick="detectLocation(this)">
+                                Detect My Location
+                                <div class="location-info"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subcategory-item" onclick="toggleDropbox(this,event)">
+                        Writing essentials
+                        <div class="dropbox">
+                            <div class="upload-section">
+                                <div class="upload-photo">
+                                    <span>Upload Photo</span>
+                                    <input type="file" class="file-input" accept="image/*" onchange="previewImage(this)">
+                                    <label class="upload-label">Choose File</label>
+                                    <img class="preview-image" alt="Preview">
+                                </div>
+                                <div class="quantity-selector">
+                                    <span>Quantity</span>
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="location-detector" onclick="detectLocation(this)">
+                                Detect My Location
+                                <div class="location-info"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subcategory-item" onclick="toggleDropbox(this,event)">
+                        Academic books
+                        <div class="dropbox">
+                            <div class="upload-section">
+                                <div class="upload-photo">
+                                    <span>Upload Photo</span>
+                                    <input type="file" class="file-input" accept="image/*" onchange="previewImage(this)">
+                                    <label class="upload-label">Choose File</label>
+                                    <img class="preview-image" alt="Preview">
+                                </div>
+                                <div class="quantity-selector">
+                                    <span>Quantity</span>
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="location-detector" onclick="detectLocation(this)">
+                                Detect My Location
+                                <div class="location-info"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subcategory-item" onclick="toggleDropbox(this,event)">
+                        Story books/ Novels
+                        <div class="dropbox">
+                            <div class="upload-section">
+                                <div class="upload-photo">
+                                    <span>Upload Photo</span>
+                                    <input type="file" class="file-input" accept="image/*" onchange="previewImage(this)">
+                                    <label class="upload-label">Choose File</label>
+                                    <img class="preview-image" alt="Preview">
+                                </div>
+                                <div class="quantity-selector">
+                                    <span>Quantity</span>
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="location-detector" onclick="detectLocation(this)">
+                                Detect My Location
+                                <div class="location-info"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="subcategory-column">
-                    <div class="subcategory-item">Craft supplies</div>
-                    <div class="subcategory-item">Adhesives</div>
-                    <div class="subcategory-item">Others</div>
+
+                    <div class="subcategory-item" onclick="toggleDropbox(this,event)">
+                        Craft supplies
+                        <div class="dropbox">
+                            <div class="upload-section">
+                                <div class="upload-photo">
+                                    <span>Upload Photo</span>
+                                    <input type="file" class="file-input" accept="image/*" onchange="previewImage(this)">
+                                    <label class="upload-label">Choose File</label>
+                                    <img class="preview-image" alt="Preview">
+                                </div>
+                                <div class="quantity-selector">
+                                    <span>Quantity</span>
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="location-detector" onclick="detectLocation(this)">
+                                Detect My Location
+                                <div class="location-info"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subcategory-item" onclick="toggleDropbox(this,event)">
+                        Adhesives
+                        <div class="dropbox">
+                            <div class="upload-section">
+                                <div class="upload-photo">
+                                    <span>Upload Photo</span>
+                                    <input type="file" class="file-input" accept="image/*" onchange="previewImage(this)">
+                                    <label class="upload-label">Choose File</label>
+                                    <img class="preview-image" alt="Preview">
+                                </div>
+                                <div class="quantity-selector">
+                                    <span>Quantity</span>
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="location-detector" onclick="detectLocation(this)">
+                                Detect My Location
+                                <div class="location-info"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="subcategory-item" onclick="toggleDropbox(this,event)">
+                        Others
+                        <div class="dropbox">
+                            <div class="upload-section">
+                                <div class="upload-photo">
+                                    <span>Upload Photo</span>
+                                    <input type="file" class="file-input" accept="image/*" onchange="previewImage(this)">
+                                    <label class="upload-label">Choose File</label>
+                                    <img class="preview-image" alt="Preview">
+                                </div>
+                                <div class="quantity-selector">
+                                    <span>Quantity</span>
+                                    <select>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="location-detector" onclick="detectLocation(this)">
+                                Detect My Location
+                                <div class="location-info"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
                 </div>
             </div>
         </section>
