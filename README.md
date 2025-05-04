@@ -26,7 +26,7 @@ This project includes a user login and signup system using Firebase Authenticati
 ![image](https://github.com/user-attachments/assets/0787dc54-13c9-49e5-b5dd-ef5f2975fc67)
 
 * **EmailJS:** Service for sending emails directly from the frontend.
-* **OpenStreetMap Nominatim API:** For reverse geocoding (converting coordinates to an address).
+* **GEOAPIFY:** For reverse geocoding (converting coordinates to an address).
 
 
 ## Usage
