@@ -23,33 +23,11 @@ This project includes a user login and signup system using Firebase Authenticati
 * **CSS:** Styling and layout.
 * **JavaScript:** Interactivity, form handling, location detection, and EmailJS integration.
 * **Firebase:** Backend-as-a-service for user authentication.
+![image](https://github.com/user-attachments/assets/0787dc54-13c9-49e5-b5dd-ef5f2975fc67)
+
 * **EmailJS:** Service for sending emails directly from the frontend.
-* **OpenStreetMap Nominatim API:** For reverse geocoding (converting coordinates to an address).
+* **GEOAPIFY:** For reverse geocoding (converting coordinates to an address).
 
-## Setup and Installation
-
-1.  **Clone the repository (if you have the code in one):**
-    ```bash
-    git clone [repository_url]
-    cd KindKart
-    ```
-
-2.  **Firebase Setup:**
-    * Go to the [Firebase Console](https://console.firebase.google.com/) and create a new project.
-    * Enable "Email/password" authentication in the "Authentication" section.
-    * Add a web app to your Firebase project and copy the Firebase configuration object.
-    * Open `login.html` and replace the placeholder values in the `firebaseConfig` object with your actual Firebase credentials.
-
-3.  **EmailJS Setup:**
-    * Sign up for an account at [https://www.emailjs.com/](https://www.emailjs.com/).
-    * Connect your email service (e.g., Gmail).
-    * Create an email template for sending the detected location and/or donation details.
-    * Open `donate.html` and replace `"kjY4_QXq2wEYW7Ogq"` in the EmailJS initialization with your actual Public Key.
-    * Open `script.js` and replace `'YOUR_EMAIL@example.com'`, `'YOUR_SERVICE_ID'`, and `'YOUR_TEMPLATE_ID'` with your actual recipient email, EmailJS Service ID, and Template ID.
-
-4.  **Running the Application:**
-    * You can open the `login.html` file directly in your web browser to start the application.
-    * Alternatively, it's recommended to use a local development server (e.g., using Node.js with `http-server` or `live-server`, or Python's built-in `http.server`).
 
 ## Usage
 
@@ -68,13 +46,13 @@ This project includes a user login and signup system using Firebase Authenticati
 ## File Structure
 
 KindKart/
-├── login.html
+├── index.html
 ├── donate.html
 ├── login.css
 ├── style.css
 ├── login.js
 └── script.js
-* `login.html`: Contains the login and signup forms.
+* `index.html`: Contains the login and signup forms.
 * `donate.html`: The main page for browsing categories and providing donation details.
 * `login.css`: Styles for the login and signup pages.
 * `style.css`: General styles for the donation page.
